@@ -10,23 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://hummingme.github.io/kahuna-docs/">
+        <link rel="canonical" href="https://hummingme.github.io/kahuna-docs/datatable/">
       
       
+        <link rel="prev" href="../database/">
       
-        <link rel="next" href="origin/">
+      
+        <link rel="next" href="../configuration/">
       
       
-      <link rel="icon" href="assets/favicon.ico">
+      <link rel="icon" href="../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
-        <title>Kahuna</title>
+        <title>Datatable - Kahuna</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
       
       
 
@@ -45,9 +47,9 @@
       
     
     
-      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-kahuna-the-indexeddb-manager" class="md-skip">
+        <a href="#datatable-view" class="md-skip">
           Skip to content
         </a>
       
@@ -82,9 +84,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Kahuna" class="md-header__button md-logo" aria-label="Kahuna" data-md-component="logo">
+    <a href=".." title="Kahuna" class="md-header__button md-logo" aria-label="Kahuna" data-md-component="logo">
       
-  <img src="img/kahuna.svg" alt="logo">
+  <img src="../img/kahuna.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -101,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome
+              Datatable
             
           </span>
         </div>
@@ -188,9 +190,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Kahuna" class="md-nav__button md-logo" aria-label="Kahuna" data-md-component="logo">
+    <a href=".." title="Kahuna" class="md-nav__button md-logo" aria-label="Kahuna" data-md-component="logo">
       
-  <img src="img/kahuna.svg" alt="logo">
+  <img src="../img/kahuna.svg" alt="logo">
 
     </a>
     Kahuna
@@ -214,6 +216,69 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../origin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Origin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -230,7 +295,7 @@
           
   
   <span class="md-ellipsis">
-    Welcome
+    Datatable
     
   </span>
   
@@ -238,11 +303,11 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Welcome
+    Datatable
     
   </span>
   
@@ -265,28 +330,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#table-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Screenshots
+      Table Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Data
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#export-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Export Data
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#installation-from-source" class="md-nav__link">
+  <a href="#empty-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation from Source
+      Empty Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop Table
     </span>
   </a>
   
@@ -298,9 +381,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-steps" class="md-nav__link">
+  <a href="#selection-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      First Steps
+      Selection Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Javascript Textarea
     </span>
   </a>
   
@@ -321,70 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="origin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Origin
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="database/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Database
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="datatable/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Datatable
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,28 +454,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#table-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Screenshots
+      Table Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Data
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#export-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Export Data
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#installation-from-source" class="md-nav__link">
+  <a href="#empty-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation from Source
+      Empty Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop Table
     </span>
   </a>
   
@@ -458,9 +505,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-steps" class="md-nav__link">
+  <a href="#selection-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      First Steps
+      Selection Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Javascript Textarea
     </span>
   </a>
   
@@ -485,34 +541,14 @@
   
 
 
-<h1 id="welcome-to-kahuna-the-indexeddb-manager">Welcome to Kahuna, the IndexedDB-Manager</h1>
-<p>Kahuna is a browser extension for managing <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> databases and is available for Firefox and Chromium based browsers, such as Google Chrome, Edge and Opera. Kahuna supports developers to manage databases and provides convenient access to the data they contain. Interested users can use Kahuna to satisfy their curiosity and find out what data the websites they visit permanently store in their browser.</p>
-<p><img src="img/kahuna.svg#center" alt="welcome to Kahuna" width="230" height="230"></p>
-<p>By nature, an IndexedDB database contains object stores in which arbitrary JavaScript objects can be stored. This differs from relational databases, which store data in tables with a fixed column schema. However, since Kahuna displays the data from object stores in a tabular view, the term table is generally used in both this documentation and the application when referring to an object store.</p>
-<h2 id="screenshots">Screenshots</h2>
-<p><img src="img/screenshots/kahuna-at-work-960x600.jpg" alt="Kahuna at work"></p>
-<h2 id="installation">Installation</h2>
-<p>To download and install the extension, please use the <a href="https://chromewebstore.google.com/detail/kahuna/ilafpdbgcaodnkdklgemggjamhpdjile">Chrome Web Store</a> for Chrome and Chromium based browsers and the <a href="https://addons.mozilla.org/en-US/firefox/addon/kahuna-the-indexeddb-manager/">Firefox Addons Page</a> for Firefox.</p>
-<ul id="store-items">
-  <li>
-      <a href="https://chromewebstore.google.com/detail/kahuna/ilafpdbgcaodnkdklgemggjamhpdjile" class="dont">
-        <img src="img/available-in-chrome-web-store.png" alt="available in chrome web store">
-      </a>
-  </li>
-  <li>
-      <a href="https://addons.mozilla.org/en-US/firefox/addon/kahuna-the-indexeddb-manager/" class="dont">
-        <img src="img/firefox-get-the-add-on.png" alt="firefox get the add-on">
-      </a>
-  </li>
-</ul>
-
-<h3 id="installation-from-source">Installation from Source</h3>
-<p>Additionally, it is possible to build and install Kahuna from source code. For this, see the <a href="https://github.com/hummingme/kahuna#build-and-install-from-source">instructions on github</a>.</p>
-<h2 id="first-steps">First Steps</h2>
-<p><img alt="pin Kahuna's browser action icon" src="img/action-icon-snippet.png#right" />
-After Kahuna has been installed, there is an entry with its icon in the extension menu of the browser. If IndexedDB databases are stored for the website dispayed by the browser, a tooltip with the number of databases is added. Use 'Pin to Toolbar' to permanently attach the icon to the browser toolbar.</p>
-<p>By clicking on the icon, the Kahuna layer is displayed above the website. Another click or the 'Esc' button close the layer again.</p>
-<p>As an alternative, the keyboard shortcut <Ctrl+Period> (the keys 'Ctrl' and '.') can be used to toggle the layer. If the keyboard shortcut does not work or you want to change it, follow these <a href="https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox">instructions for Firefox</a> or for Chrome visit <a href="chrome://extensions/">chrome://extensions/</a> and use the 'Keyboard Shortcuts' menu.</p>
+<h1 id="datatable-view">Datatable View</h1>
+<h2 id="table-tools">Table Tools</h2>
+<h3 id="import-data">Import Data</h3>
+<h3 id="export-data">Export Data</h3>
+<h3 id="empty-table">Empty Table</h3>
+<h3 id="drop-table">Drop Table</h3>
+<h2 id="selection-tools">Selection Tools</h2>
+<h2 id="javascript-textarea">Javascript Textarea</h2>
 
 
 
@@ -559,10 +595,10 @@ After Kahuna has been installed, there is an entry with its icon in the extensio
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
