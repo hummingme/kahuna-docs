@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -113,11 +113,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -149,6 +151,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -220,6 +223,7 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Welcome
     
@@ -240,6 +244,7 @@
     <li class="md-nav__item">
       <a href="../origin/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Origin
@@ -262,6 +267,7 @@
       <a href="../database/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Database
     
@@ -282,6 +288,7 @@
     <li class="md-nav__item">
       <a href="../datatable/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Datatable
@@ -311,6 +318,7 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Configuration
     
@@ -322,6 +330,7 @@
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
+  
   
   <span class="md-ellipsis">
     Configuration
@@ -536,19 +545,136 @@
   <h1>Configuration</h1>
 
 <p>Kahuna's configuration is hierarchical; it can be configured globally for all origins, for individual databases within an origin, or for individual tables within a database. More general configuration settings serve as default values ​​for subordinate configurations.</p>
-<p>In each view the configuration is invoked with the  <span class="adjustments-icon"></span> icon in the title bar. The tabs <em><strong>behavior</strong></em>, <em><strong>columns</strong></em>, <em><strong>filters</strong></em>, <em><strong>import</strong></em>, <em><strong>export</strong></em> and in the global view <em><strong>application</strong></em> must be clicked to switch to the respective configuration domain.</p>
+<p>In each view the configuration is invoked with the <span class="adjustments-icon"></span> icon in the title bar. The tabs <em><strong>behavior</strong></em>, <em><strong>columns</strong></em>, <em><strong>filters</strong></em>, <em><strong>import</strong></em>, <em><strong>export</strong></em> and in the global view <em><strong>application</strong></em> must be clicked to switch to the respective configuration domain.</p>
 <p><img src="../img/snippets/configuration-switch-600x158.png#center" alt="configuration target switch" width="600" height="158"></p>
 <p>When invoked from the database view or the table view, the <span class="square-rounded-chevron-down-icon"></span> icon at the right of the headline can be used to switch to the parent configurations and back.</p>
 <p><span class="circle-dot-icon"></span> next to a setting indicates that the setting has its default value, as set by the parent configuration or by the application.</p>
 <p>The <span class="check-icon"></span> icon indicates that the setting has been changed and saved since the configuration was invoked and that the change will be undone if the <em><strong>undo changes</strong></em> button is pressed.</p>
 <h2 id="application">Application</h2>
+<p>The application tab is used for settings that control the properties of the application itself and not how databases, tables or data are handled. If this tab is not displayed, use the <span class="square-rounded-chevron-down-icon"></span> icon and switch to the settings for <em><strong>global
+ application and defaults</strong></em>.</p>
+<div class="map application-settings" width="516" height="283">
+  <img src="../img/snippets/configuration-application-516x283.png#center" alt="application settings" width="516" height="283">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+</div>
+
+<ol>
+<li>
+<p>Sets the color scheme Kahuna is displayed in. You can choose between the preferred color scheme according to your browser settings, a dark color scheme, and a light color scheme.</p>
+</li>
+<li>
+<p>Specifies whether <span class="a"></span> should be applied for the origin of the currently displayed website or whether a dark or light color scheme should be used instead.</p>
+</li>
+<li>
+<p>If set, empty databases (databases that do not contain any tables) are not counted for the notification in the browser action tooltip. Databases that contain only empty tables without records are not considered empty. Empty databases are always included in the <a href="../origin/#database-list">database list</a> unless they are excluded in <span class="d"></span>. </p>
+</li>
+<li>
+<p>A list of database names that should neither be counted for the notification tooltip nor appear in the database list. Use the <span class="square-rounded-plus-icon"></span> icon to add names and the <span class="square-rounded-minus-icon"></span> icon behind a name to remove it from the list. The default entry <em>__dbnames</em> is used by the dexie library for older browsers that do not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">listing all existing databases</a>.</p>
+</li>
+<li>
+<p>After activation and subsequent confirmation, all saved settings will be reset to their default values. The deleted data also includes the defined filters and columns, saved JavaScript code, the window position and size and which notification messages should no longer be displayed.</p>
+</li>
+</ol>
 <h2 id="behavior">Behavior</h2>
+<p>The image shows how to configure Kahuna's behavior for the selected table <em>meteroites</em>, while displaying this table in the <a href="../datatable/">datatable</a> view. To configure settings for all tables in a database or globally, first switch to the database settings or the global settings via the <span class="square-rounded-chevron-down-icon"></span> icon.</p>
+<div class="map behavior-settings" width="463" height="303">
+  <img src="../img/snippets/configuration-behavior-463x303.png#center" alt="behavior settings" width="463" height="303">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+  <div class="f"></div>
+</div>
+
+<ol>
+<li>
+<p>By default, a confirmation is requested when <strong><em>delete row</em></strong> is clicked for a record in the <a href="../datatable/">datatable</a>. Uncheck this option to disable the confirmation request before deletion.</p>
+</li>
+<li>
+<p>Specifies whether a <a href="../datatable/#javascript-textarea">JavaScript textarea</a> is displayed beneath the datatable.</p>
+</li>
+<li>
+<p>If checked, a text with the available global variables is displayed in the <a href="../datatable/#javascript-textarea">JavaScript textarea</a>.</p>
+</li>
+<li>
+<p>The number of rows the <a href="../datatable/">datatable</a> displays on a page.</p>
+</li>
+<li>
+<p>Errors, warnings, and information messages displayed at the bottom of the window disappear after the number of seconds specified here. If a zero is entered, the messages will remain displayed until clicked.</p>
+</li>
+<li>
+<p>Sets the currently displayed table as the initial view when Kahuna starts. If the table does not exist, the database list is displayed instead. If this is checked in the database-wide settings, the table list is displayed at startup.</p>
+</li>
+</ol>
 <h2 id="columns">Columns</h2>
+<p>In the columns configuration the <strong><em>columns for data fields</em></strong> section only exists when the settings are made for an individual table. While database-wide or global settings are chosen, only <span class="a"></span> can be set as the default for all tables.</p>
+<div class="map columns-settings" width="547" height="305">
+  <img src="../img/snippets/configuration-columns-547x305.png#center" alt="columns settings" width="547" height="305">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+</div>
+
+<ol>
+<li>
+<p>When invoked, the datatable analyses the data of the first page to identify the existing columns. If the data objects on subsequent pages have additional properties, this setting determines how they are handled. If checked, they are immediately added to the table as columns. If not checked, an indicator with the number of the found properties is displayed. Hovering the indicator allows you to add them all as columns or to switch to the columns configuration.</p>
+</li>
+<li>
+<p>Grab a position number with the mouse to change the column order by drag &amp; drop.</p>
+</li>
+<li>
+<p><strong><em>date</em></strong> and <strong><em>url</em></strong> are the selectable format options that are applied when the column contains suitable data for formatting. For <em>date</em> this are integer values ​​which when interpreted as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date">timestamps</a>(either by themselves or multiplied by 1000), are within the period from 10 years in the past to 20 years in the future. For <strong>url</strong> it must be a string that begins with <code>https:</code>, <code>http:</code> or <code>file:</code>, or the string must look like a web address in order to be displayed as an outgoing link.</p>
+</li>
+<li>
+<p>Unckeck to hide a column from the datatable view. The column in which the primary key is displayed cannot be hidden.</p>
+</li>
+</ol>
 <h2 id="filters">Filters</h2>
+<p>The filters tab is primarily used to define the filters that are displayed above a datatable. While the global or database-wide settings are being configured, this view is mostly empty, except <span class="g"></span>.</p>
+<div class="map filters-settings" width="480" height="404">
+  <img src="../img/snippets/configuration-filters-480x404.png" alt="filters settings" width="480" height="404">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+  <div class="f"></div>
+  <div class="g"></div>
+</div>
+
+<ol>
+<li>
+<p>The numbering corresponds to the order of the filters in the datatable view. To change the order, grab a number with the mouse and drag &amp; drop it to its new position.</p>
+</li>
+<li>
+<p>A selection list of the data field for which the filter should be applied.</p>
+</li>
+<li>
+<p>Selection of the filter type. In detail, these are <strong>=</strong> (equal), <strong>&lt;</strong> (below), <strong>&gt;</strong> (above), <strong>≠</strong> (unequal), <strong>..%</strong> (starts with), <strong>%..</strong> (ends with), <strong>%..%</strong> (contains), <strong>(empty)</strong> (captures empty values) and <strong>/regexp/</strong> (matches a regular expression). When using a regexp filter, only the pattern must be entered, not the slashes.</p>
+</li>
+<li>
+<p>The options in this column are varying depending on the filter type selected in <span class="c"></span>. The option <strong>case sensitive</strong> can be set for the filter types =, ≠, ..%, %.., %..%, and /regexp/. Option <strong>include bounds</strong> is possible with &lt; and &gt;. For the empty filter type you can set which values ​​should be considered empty (undefined, null, empty strings , empty arrays or empty objects).</p>
+</li>
+<li>
+<p>Click any of the <span class="trash-icon" info="trash can"></span> icons to remove a filter.</p>
+</li>
+<li>
+<p>Click the <span class="square-rounded-plus-icon" info="plus"></span> icon to add a filter.</p>
+</li>
+<li>
+<p>When checked, filter settings and filters are highlighted when no index is used to apply them. This is not a problem for small tables (say a few thousand records) or if the number of records to which they are applied is reduced by additional, indexed filters. However, for large tables and without additional index-based result restrictions, the search will be significantly slower.</p>
+</li>
+</ol>
 <h2 id="import">Import</h2>
 <p>The screenshot shows the default settings for importing data from files in Dexie, JSON or CSV format. Some options are only relevant for certain import formats or for certain import scenarios. Details can be found in the explanations for the individual items.</p>
 <div class="map import-settings" width="541" height="490">
-  <img src="../img/snippets/configuration-import-541x490.png" alt="configuration import settings" width="541" height="490">
+  <img src="../img/snippets/configuration-import-541x490.png" alt="import settings" width="541" height="490">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
@@ -604,7 +730,7 @@
 <h2 id="export">Export</h2>
 <p>The screenshot shows the default settings that are applied when exporting data in Dexie, JSON and CSV format.</p>
 <div class="map export-settings" width="519" height="371">
-  <img src="../img/snippets/configuration-export-519x371.png" alt="configuration export settings" width="519" height="371">
+  <img src="../img/snippets/configuration-export-519x371.png" alt="export settings" width="519" height="371">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
@@ -741,10 +867,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

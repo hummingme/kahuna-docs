@@ -71,10 +71,19 @@ span[class$='-icon'] {
 .square-rounded-chevron-down-icon {
     background-image: url(icons.svg#tabler-square-rounded-chevron-down);
 }
+.square-rounded-plus-icon {
+    background-image: url(icons.svg#tabler-square-rounded-plus);
+}
+.square-rounded-minus-icon {
+    background-image: url(icons.svg#tabler-square-rounded-minus);    
+}
+.trash-icon {
+    background-image: url(icons.svg#tabler-trash);    
+}
 
 div.map {
     position: relative;
-    margin-left: .3rem;
+    margin: 0 auto;
     div {
         position: absolute;
         color: indianred;
@@ -89,17 +98,16 @@ div.map + ol {
         font-weight: bold;
         font-size: 1.175em;
     }
-    span {
-        font-weight: bold;
-        font-size: 1.175em;       
-    }
 }
 @counter-style circled-alpha {
     system: fixed;
     symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
     suffix: " ";
 }
-
+.a, .b, .c, .d, .e, .f, .g, .h, .i, .j, .k, .l, .m, .n, .o, .p, .q {
+    font-weight: bold;
+    font-size: 1.175em;
+}
 .a::before { content: "Ⓐ"; }
 .b::before { content: "Ⓑ"; }
 .c::before { content: "Ⓒ"; }
@@ -113,6 +121,44 @@ div.map + ol {
 .k::before { content: "Ⓚ"; }
 .l::before { content: "Ⓛ"; }
 
+div.application-settings {
+    height: 283px;
+    width: 516px;
+    .a { top: 26.5%; left: -4.5%; }
+    .b { top: 38.5%; left: -4.5%; }
+    .c { top: 50%; left: -4.5%; }
+    .d { top: 60.5%; left: -4.5%; }
+    .e { top: 74%; left: -4.5%; }
+}
+div.behavior-settings {
+    height: 303px;
+    width: 463px;
+    .a { top: 23.9%; left: 65.5%; }
+    .b { top: 33.8%; left: 89%; }
+    .c { top: 43.7%; left: 89.8%; }
+    .d { top: 54%; left: 36%; }
+    .e { top: 64.8%; left: 92.1%; }
+    .f { top: 75%; left: 100.3%; }
+}
+div.columns-settings {
+    height: 305px;
+    width: 547px;
+    .a { top: 19.2%; left: 4.5%; }
+    .b { top: 55.2%; left: 1%; }
+    .c { top: 55.2%; left: 33.5%; }
+    .d { top: 55.2%; left: 51.5%; }
+}
+div.filters-settings {
+    height: 404px;
+    width: 480px;
+    .a { top: 23.4%; left: .2%; }
+    .b { top: 24.1%; left: 28%; }
+    .c { top: 24.1%; left: 48%; }
+    .d { top: 15%; left: 62%; }
+    .e { top: 15%; left: 91.3%; }
+    .f { top: 72.2%; left: 87%; }
+    .g { top: 77%; left: 5.7%; }
+}
 div.import-settings {
     height: 490px;
     width: 541px;
