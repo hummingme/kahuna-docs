@@ -545,13 +545,13 @@
   <h1>Configuration</h1>
 
 <p>Kahuna's configuration is hierarchical; it can be configured globally for all origins, for individual databases within an origin, or for individual tables within a database. More general configuration settings serve as default values ​​for subordinate configurations.</p>
-<p>In each view the configuration is invoked with the <span class="adjustments-icon"></span> icon in the title bar. The tabs <em><strong>behavior</strong></em>, <em><strong>columns</strong></em>, <em><strong>filters</strong></em>, <em><strong>import</strong></em>, <em><strong>export</strong></em> and in the global view <em><strong>application</strong></em> must be clicked to switch to the respective configuration domain.</p>
+<p>In each view the configuration is invoked with the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon in the title bar. The tabs <em><strong>behavior</strong></em>, <em><strong>columns</strong></em>, <em><strong>filters</strong></em>, <em><strong>import</strong></em>, <em><strong>export</strong></em> and in the global view <em><strong>application</strong></em> must be clicked to switch to the respective configuration domain.</p>
 <p><img src="../img/snippets/configuration-switch-600x158.png#center" alt="configuration target switch" width="600" height="158"></p>
-<p>When invoked from the database view or the table view, the <span class="square-rounded-chevron-down-icon"></span> icon at the right of the headline can be used to switch to the parent configurations and back.</p>
-<p><span class="circle-dot-icon"></span> next to a setting indicates that the setting has its default value, as set by the parent configuration or by the application.</p>
-<p>The <span class="check-icon"></span> icon indicates that the setting has been changed and saved since the configuration was invoked and that the change will be undone if the <em><strong>undo changes</strong></em> button is pressed.</p>
+<p>When invoked from the database view or the table view, the <span class="square-rounded-chevron-down-icon" role="img" aria-label="chevron down"></span> icon at the right of the headline can be used to switch to the parent configurations and back.</p>
+<p><span class="circle-dot-icon" role="img" aria-label="circled dot icon"></span> next to a setting indicates that the setting has its default value, as set by the parent configuration or by the application.</p>
+<p>The <span class="check-icon" role="img" aria-label="checked"></span> icon indicates that the setting has been changed and saved since the configuration was invoked and that the change will be undone if the <em><strong>undo changes</strong></em> button is pressed.</p>
 <h2 id="application">Application</h2>
-<p>The application tab is used for settings that control the properties of the application itself and not how databases, tables or data are handled. If this tab is not displayed, use the <span class="square-rounded-chevron-down-icon"></span> icon and switch to the settings for <em><strong>global
+<p>The application tab is used for settings that control the properties of the application itself and not how databases, tables or data are handled. If this tab is not displayed, use the <span class="square-rounded-chevron-down-icon" role="img" aria-label="chevron down"></span> icon and switch to the settings for <em><strong>global
  application and defaults</strong></em>.</p>
 <div class="map application-settings" width="516" height="283">
   <img src="../img/snippets/configuration-application-516x283.png#center" alt="application settings" width="516" height="283">
@@ -567,20 +567,20 @@
 <p>Sets the color scheme Kahuna is displayed in. You can choose between the preferred color scheme according to your browser settings, a dark color scheme, and a light color scheme.</p>
 </li>
 <li>
-<p>Specifies whether <span class="a"></span> should be applied for the origin of the currently displayed website or whether a dark or light color scheme should be used instead.</p>
+<p>Specifies whether <span class="a" role="img" aria-label="item a"></span> should be applied for the origin of the currently displayed website or whether a dark or light color scheme should be used instead.</p>
 </li>
 <li>
-<p>If set, empty databases (databases that do not contain any tables) are not counted for the notification in the browser action tooltip. Databases that contain only empty tables without records are not considered empty. Empty databases are always included in the <a href="../origin/#database-list">database list</a> unless they are excluded in <span class="d"></span>. </p>
+<p>If set, empty databases (databases that do not contain any tables) are not counted for the notification in the browser action tooltip. Databases that contain only empty tables without records are not considered empty. Empty databases are always included in the <a href="../origin/#database-list">database list</a> unless they are excluded in <span class="d" role="img" aria-label="item d"></span>. </p>
 </li>
 <li>
-<p>A list of database names that should neither be counted for the notification tooltip nor appear in the database list. Use the <span class="square-rounded-plus-icon"></span> icon to add names and the <span class="square-rounded-minus-icon"></span> icon behind a name to remove it from the list. The default entry <em>__dbnames</em> is used by the dexie library for older browsers that do not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">listing all existing databases</a>.</p>
+<p>A list of database names that should neither be counted for the notification tooltip nor appear in the database list. Use the <span class="square-rounded-plus-icon" role="img" aria-label="plus"></span> icon to add names and the <span class="square-rounded-minus-icon" role="img" aria-label="minus"></span> icon behind a name to remove it from the list. The default entry <em>__dbnames</em> is used by the dexie library for older browsers that do not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">listing all existing databases</a>.</p>
 </li>
 <li>
 <p>After activation and subsequent confirmation, all saved settings will be reset to their default values. The deleted data also includes the defined filters and columns, saved JavaScript code, the window position and size and which notification messages should no longer be displayed.</p>
 </li>
 </ol>
 <h2 id="behavior">Behavior</h2>
-<p>The image shows how to configure Kahuna's behavior for the selected table <em>meteroites</em>, while displaying this table in the <a href="../datatable/">datatable</a> view. To configure settings for all tables in a database or globally, first switch to the database settings or the global settings via the <span class="square-rounded-chevron-down-icon"></span> icon.</p>
+<p>The image shows how to configure Kahuna's behavior for the selected table <em>meteroites</em>, while displaying this table in the <a href="../datatable/">datatable</a> view. To configure settings for all tables in a database or globally, first switch to the database settings or the global settings via the <span class="square-rounded-chevron-down-icon" role="img" aria-label="chevron down"></span> icon.</p>
 <div class="map behavior-settings" width="463" height="303">
   <img src="../img/snippets/configuration-behavior-463x303.png#center" alt="behavior settings" width="463" height="303">
   <div class="a"></div>
@@ -612,7 +612,7 @@
 </li>
 </ol>
 <h2 id="columns">Columns</h2>
-<p>In the columns configuration the <strong><em>columns for data fields</em></strong> section only exists when the settings are made for an individual table. While database-wide or global settings are chosen, only <span class="a"></span> can be set as the default for all tables.</p>
+<p>In the columns configuration the <strong><em>columns for data fields</em></strong> section only exists when the settings are made for an individual table. While database-wide or global settings are chosen, only <span class="a" role="img" aria-label="item a"></span> can be set as the default for all tables.</p>
 <div class="map columns-settings" width="547" height="305">
   <img src="../img/snippets/configuration-columns-547x305.png#center" alt="columns settings" width="547" height="305">
   <div class="a"></div>
@@ -636,7 +636,7 @@
 </li>
 </ol>
 <h2 id="filters">Filters</h2>
-<p>The filters tab is primarily used to define the filters that are displayed above a datatable. While the global or database-wide settings are being configured, this view is mostly empty, except <span class="g"></span>.</p>
+<p>The filters tab is primarily used to define the filters that are displayed above a datatable. While the global or database-wide settings are being configured, this view is mostly empty, except <span class="g" role="img" aria-label="item g"></span>.</p>
 <div class="map filters-settings" width="480" height="404">
   <img src="../img/snippets/configuration-filters-480x404.png" alt="filters settings" width="480" height="404">
   <div class="a"></div>
@@ -659,13 +659,13 @@
 <p>Selection of the filter type. In detail, these are <strong>=</strong> (equal), <strong>&lt;</strong> (below), <strong>&gt;</strong> (above), <strong>≠</strong> (unequal), <strong>..%</strong> (starts with), <strong>%..</strong> (ends with), <strong>%..%</strong> (contains), <strong>(empty)</strong> (captures empty values) and <strong>/regexp/</strong> (matches a regular expression). When using a regexp filter, only the pattern must be entered, not the slashes.</p>
 </li>
 <li>
-<p>The options in this column are varying depending on the filter type selected in <span class="c"></span>. The option <strong>case sensitive</strong> can be set for the filter types =, ≠, ..%, %.., %..%, and /regexp/. Option <strong>include bounds</strong> is possible with &lt; and &gt;. For the empty filter type you can set which values ​​should be considered empty (undefined, null, empty strings , empty arrays or empty objects).</p>
+<p>The options in this column are varying depending on the filter type selected in <span class="c" role="img" aria-label="item c"></span>. The option <strong>case sensitive</strong> can be set for the filter types =, ≠, ..%, %.., %..%, and /regexp/. Option <strong>include bounds</strong> is possible with &lt; and &gt;. For the empty filter type you can set which values ​​should be considered empty (undefined, null, empty strings , empty arrays or empty objects).</p>
 </li>
 <li>
-<p>Click any of the <span class="trash-icon" info="trash can"></span> icons to remove a filter.</p>
+<p>Click any of the <span class="trash-icon" role="img" aria-label="trashcan"></span> icons to remove a filter.</p>
 </li>
 <li>
-<p>Click the <span class="square-rounded-plus-icon" info="plus"></span> icon to add a filter.</p>
+<p>Click the <span class="square-rounded-plus-icon" role="img" aria-label="plus"></span> icon to add a filter.</p>
 </li>
 <li>
 <p>When checked, filter settings and filters are highlighted when no index is used to apply them. This is not a problem for small tables (say a few thousand records) or if the number of records to which they are applied is reduced by additional, indexed filters. However, for large tables and without additional index-based result restrictions, the search will be significantly slower.</p>
@@ -721,10 +721,10 @@
 <p>On Dexie import into an existing database: Is it allowed that the import file contains empty tables that do not exist in the target database.</p>
 </li>
 <li>
-<p>If checked, the data of a field from the import file whose name is entered in <span class="l"></span> will be imported as a single value. Otherwise, the entire data of all fields will be imported as an object. In other words, this enables import when a table is used as a key-value store rather than an object store. If the specified field is empty for a record in CSV import or not present in JSON import, the complete record is imported as an object. This setting is supported for JSON and CSV imports and when the table has an unnamed primary key. If the primary key is not an autoincrement primary key, the name of a designated field must be entered in <span class="c"></span>.</p>
+<p>If checked, the data of a field from the import file whose name is entered in <span class="l" role="img" aria-label="item l"></span> will be imported as a single value. Otherwise, the entire data of all fields will be imported as an object. In other words, this enables import when a table is used as a key-value store rather than an object store. If the specified field is empty for a record in CSV import or not present in JSON import, the complete record is imported as an object. This setting is supported for JSON and CSV imports and when the table has an unnamed primary key. If the primary key is not an autoincrement primary key, the name of a designated field must be entered in <span class="c" role="img" aria-label="item c"></span>.</p>
 </li>
 <li>
-<p>The name of a field from the import file whose values ​​should be imported as direct values in a key-value store. For this setting to be applied, <span class="k"></span> must be checked. Supported for JSON and CSV imports.</p>
+<p>The name of a field from the import file whose values ​​should be imported as direct values in a key-value store. For this setting to be applied, <span class="k" role="img" aria-label="item k"></span> must be checked. Supported for JSON and CSV imports.</p>
 </li>
 </ol>
 <h2 id="export">Export</h2>

@@ -552,29 +552,30 @@
 
 <h1 id="database-view">Database View</h1>
 <p>Central to this view is a list in which the tables (aka object stores) belonging to a database are displayed. If it is an empty database that does not contain any tables, there is a link that can be used to invoke <a href="#create-table">Create Table</a>.</p>
-<p>In the database view, the <span class="settings-icon"></span> icon in the window title bar opens the <a href="#database-tools">database tools</a>, while the <span class="adjustments-icon"></span> icon opens the <a href="../configuration/">configuration</a> options that apply to this database and serve as default settings for the tables it contains.</p>
+<p>In the database view, the <span class="settings-icon" role="img" aria-label="settings"></span> icon in the window title bar opens the <a href="#database-tools">database tools</a>, while the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon opens the <a href="../configuration/">configuration</a> options that apply to this database and serve as default settings for the tables it contains.</p>
 <p>Clicking on the database part of the breadcrumb navigation reloads the database list or returns to it if a <a href="../datatable/">datatable</a> is displayed in the current view.</p>
 <h2 id="table-list">Table List</h2>
 <p>For each table, its name, its primary key and further indexes, and the number of records it contains are displayed. </p>
 <p><img src="../img/snippets/table-list-536x241.png#center" alt="table list in database view" width="536" height="241"></p>
-<p>If you hover one of the rows, another <span class="settings-icon"></span> icon will appear next to the row, which can be used to open the <a href="../datatable/#table-tools">table tools</a>. To switch to the view of one of the <a href="../datatable/">data tables</a>, click on the corresponding row in the table.</p>
+<p>If you hover one of the rows, another <span class="settings-icon" role="img" aria-label="settings"></span> icon will appear next to the row, which can be used to open the <a href="../datatable/#table-tools">table tools</a>. To switch to the view of one of the <a href="../datatable/">data tables</a>, click on the corresponding row in the table.</p>
 <h2 id="database-tools">Database Tools</h2>
-<p>To invoke the database tools use either the gear icon <span class="settings-icon"></span> in the window title bar of the database view or the same icon next to a database row in the <a href="../origin/">origin view</a>. You can choose to import data or export the database, create an additional table, modify the database schema or to delete the database.</p>
+<p>To invoke the database tools use either the gear icon <span class="settings-icon" role="img" aria-label="settings"></span> in the window title bar of the database view or the same icon next to a database row in the <a href="../origin/">origin view</a>. You can choose to import data or export the database, create an additional table, modify the database schema or to delete the database.</p>
 <p><img src="../img/snippets/origin-list-database-tools-423x304.png#center" alt="database tools menu" width="406" height="246"></p>
 <h3 id="export-database">Export Database</h3>
 <p>The database export uses the <a href="https://www.npmjs.com/package/dexie-export-import#user-content-example-json-file">dexie format</a> for the output file, a json-based format that supports all data types (beside CryptoKey) that can be stored in IndexedDB databases.</p>
 <p><img src="../img/snippets/database-tools-export-547x202.png#center" alt="database tools export" width="547" height="202"></p>
-<p>Hovering the <span class="info-icon"></span> icon displays the export options that will be applied. To adjust the export options, click the <span class="adjustments-icon"></span> icon on the right. The export options are documented in <a href="../configuration/#export">Configuration / Export</a>.</p>
+<p>Hovering the <span class="info-icon" role="img" aria-label="info"></span> icon displays the export options that will be applied. To adjust the export options, click the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon on the right. The export options are documented in <a href="../configuration/#export">Configuration / Export</a>.</p>
 <h3 id="import-data">Import Data</h3>
 <p><img src="../img/snippets/database-tools-import-409x273.png#right" alt="database tools import" width="409" height="273"></p>
 <p>Under <strong><em>import data</em></strong> in the Database Tools, a file in dexie format can be selected. This file can contain the export of an entire database, the export of a single table, or the export of selected data records from a table, depending on whether it was created in the Database Tools, the Table Tools, or the Selection Tools.</p>
-<p>Hovering the <span class="info-icon"></span> icon displays the import options that will be applied. To adjust the import options, click the <span class="adjustments-icon"></span> icon. The import options are documented in <a href="../configuration/#import">Configuration / Import</a>.</p>
+<p>Hovering the <span class="info-icon" role="img" aria-label="info"></span> icon displays the import options that will be applied. To adjust the import options, click the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon. The import options are documented in <a href="../configuration/#import">Configuration / Import</a>.</p>
 <p class="clear" />
 
 <h3 id="create-table">Create Table</h3>
-<p><img src="../img/snippets/database-tools-create-table-266x138.png#left" alt="database tools create table" width="266" height="138"></p>
+<p><img src="../img/snippets/database-tools-create-table-268x141.png#left" alt="database tools create table" width="268" height="141"></p>
 <p>If <strong><em>create table</em></strong> is selected, you can enter the name for a new table and a string representation of the indexes to be created for the table. Any string is allowed as the table name, with the only restriction that it must be unique within the database.</p>
 <p>Within the indexes string, the individual indexes are separated by commas. Since the keypaths parts of an index refer to object properties, a valid keypath consists of valid JavaScript identifiers, possibly separated by dots. The complete syntax for index strings is described in the <a href="https://dexie.org/docs/Version/Version.stores()#detailed-schema-syntax">dexie documentation</a>.</p>
+<p>As with all actions that change the database schema, the database version is increased.</p>
 <p class="clear" />
 
 <h3 id="modify-database-schema">Modify Database Schema</h3>
@@ -588,9 +589,9 @@
     sattelites: &quot;++&quot;
 };
 </code></pre>
-<p>When editing <code>newSchema</code>, make sure that a valid JavaScript object is preserved, otherwise an error message will be displayed when executing</p>
+<p>When editing <code>newSchema</code>, make sure that a valid JavaScript object is preserved, otherwise an error message will be displayed when executing. After successful execution, the database version is increased by 1.</p>
 <h3 id="delete-database">Delete Database</h3>
-<p>After confirmation, the selected database will be permanently deleted. To avoid damage, it is always a good idea to create a backup beforehand using <strong><em>export database</em></strong>.</p>
+<p>After confirmation, the selected database will be permanently deleted. To avoid damage, it is always a good idea to create a backup beforehand using <a href="#export-database"><strong><em>export database</em></strong></a>.</p>
 
 
 

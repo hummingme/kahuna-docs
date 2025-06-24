@@ -400,7 +400,7 @@
         <li class="md-nav__item">
   <a href="#javascript-textarea" class="md-nav__link">
     <span class="md-ellipsis">
-      Javascript Textarea
+      JavaScript Textarea
     </span>
   </a>
   
@@ -525,7 +525,7 @@
         <li class="md-nav__item">
   <a href="#javascript-textarea" class="md-nav__link">
     <span class="md-ellipsis">
-      Javascript Textarea
+      JavaScript Textarea
     </span>
   </a>
   
@@ -551,13 +551,118 @@
 
 
 <h1 id="datatable-view">Datatable View</h1>
+<p>The datatable is where the data contained in an object store is displayed in a grid view. Combinable filters allow to narrow down the displayed data in a variety of ways. And the data can be edited or deleted individually, in any selection, or in its entirety. If a table is empty, <a href="#import-data">data can be imported</a> if it is in Dexie, JSON, or CSV format. Or, the <a href="#javascript-textarea">javascript textarea</a> can be used to insert records.</p>
+<div class="map datatable" width="597" height="331">
+  <img src="../img/snippets/datatable-597x331.png#center" alt="datatable" width="597" height="331">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+  <div class="f"></div>
+  <div class="g"></div>
+  <div class="h"></div>
+  <div class="i"></div>
+  <div class="j"></div>
+</div>
+
+<ol>
+<li>
+<p>The caption informs about the name and number of records in the displayed table.</p>
+</li>
+<li>
+<p>With the <span class="adjustments-search-icon" role="img" aria-label="search configuration"></span> icon on the left side of the filter elements the <a href="../configuration/#filters">filter configuration</a> can be invoked.</p>
+</li>
+<li>
+<p>All filters configured for the table are displayed side by side. The order can be adjusted via drag &amp; drop in the <a href="../configuration/#filters">filter configuration</a>. As long as no search value is entered and always when hovering with the mouse, the name of the filter field and the filter type are visible.</p>
+</li>
+<li>
+<p>The search is triggered when the <span class="check-icon" role="img" aria-label="submit"></span> button is clicked or by pressing the Return key while entering a search value. Clicking the <span class="x-icon" role="img" aria-label="reset"></span> button resets all search fields. Search entries are saved as part of the filter configuration so that they remain active when a table is accessed again at a later time.</p>
+</li>
+<li>
+<p>The table navigation consists of the four chevron buttons to scroll forward and backward through the records, two input fields to display and enter the start and end position of the displayed records and the total number of records that correspond to the search entries. How many records are displayed per page is set in the <a href="../configuration/#behavior">behavior configuration</a>.</p>
+</li>
+<li>
+<p>The order of the datatable columns is set via drag &amp; drop in the <a href="../configuration/#columns">column configuration</a>. While the mouse is over a column heading, the column's delimiters are visible and can be dragged to adjust its width. A triangle icon indicates whether a column is sorted in ascending or descending order. To sort a column or change the sorting direction, click the column heading. Sorting data columns that contain non-indexed data can be very slow for tables with many records. Double-clicking on the heading of a sorted column will terminate the sorting. The column sorting is saved as part of the column configuration and remains active when the table is accessed again later.</p>
+</li>
+<li>
+<p>An indicator that signals the presence of columns not currently displayed in the datatable. These may be columns that have been manually hidden in the <a href="../configuration/#columns">column configuration</a>, or newly discovered columns encountered while scrolling through the data, when the system is configured not to display such columns automatically. When hovering over the number, a tooltip appears showing details about the hidden columns, along with an icon that serves as a shortcut to the column configuration.</p>
+</li>
+<li>
+<p>Clicking on a data row selects the row, clicking again deselects it. Selected rows are displayed with a different background color, and their total number is shown in <span class="j" role="img" aria-label="item j"></span>.</p>
+</li>
+<li>
+<p>When the mouse hover over a table row, icons appear that allow to delete or edit the displayed data. The editing of row data is done in a textarea below the datatable as javascript code.</p>
+</li>
+<li>
+<p>Below the datatable, information about and actions for the selected records are displayed. The <strong><strong>select all</strong></strong> checkbox de-/selects all data rows that are displayed based on the filter entries. The <strong><strong>select page</strong></strong> checkbox does the same with the data rows on the currently displayed on the screen. The <span class="settings-icon" role="img" aria-label="settings"></span> icon behind the number of selected records is used to display the <a href="#selection-tools">selection tools</a>.</p>
+</li>
+</ol>
 <h2 id="table-tools">Table Tools</h2>
+<p><img src="../img/snippets/datatable-tools-256x180.png#left" alt="table tools" width="256" height="180"></p>
+<p>While in the datatable view, the table tools are accessed via the <span class="settings-icon" role="img" aria-label="settings"></span> icon displayed in the window title. In addition, the table tools can be accessed by clicking on the gear icon that appears when hovering over a row of the <a href="../database/#table-list">table list</a> in the database view.</p>
+<p class="clear" />
+
 <h3 id="import-data">Import Data</h3>
+<p><img src="../img/snippets/datatable-tools-import-212x148.png#right" alt="table tools import" width="212" height="148"></p>
+<p>Select which data format to use for the import: Dexie, JSON or CSV. After a file is selected, the contained data is imported into the displayed table and when finished, the datatable view is updated. Hovering over the <span class="info-icon" role="img" aria-label="info"></span> icon displays the relevant import settings for the selected format and provides a shortcut to adjust the <a href="../configuration/#import">import configuration</a>. </p>
+<p class="clear" />
+
 <h3 id="export-data">Export Data</h3>
+<p><img src="../img/snippets/datatable-tools-export-300x202.png#right" alt="table tools export" width="300" height="202"></p>
+<p>Using the dropdown list, the export format can be changed between Dexie format, JSON and CSV. The file name for the export file follows the <a href="../configuration/#filename-templates">pattern</a> saved in the export configuration. If the filename field is selected, the pattern is displayed and can be edited. A modified pattern is saved in the configuration of the table. If the mouse hovers over the <span class="info-icon" role="img" aria-label="info"></span> icon, a layer with the export settings relevant for the selected format is displayed. The <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon present in this settings layer can be used to adjust the export configuration.</p>
+<p class="clear" />
+
 <h3 id="empty-table">Empty Table</h3>
+<p><img src="../img/snippets/datatable-tools-empty-table-255x162.png#left" alt="table tools empty table" width="255" height="162"></p>
+<p>By clicking on <strong><em>empty table</em></strong> and subsequent confirming, all existing records will be deleted from the table.</p>
+<p class="clear" />
+
 <h3 id="drop-table">Drop Table</h3>
+<p><img src="../img/snippets/datatable-tools-drop-table-212x143.png#left" alt="table tools empty table" width="212" height="143"></p>
+<p>After confirmation, the table and all data it contains will be irrevocably deleted. Since the action modifies the database schema, the database version is incremented by 1.</p>
+<p class="clear" />
+
 <h2 id="selection-tools">Selection Tools</h2>
-<h2 id="javascript-textarea">Javascript Textarea</h2>
+<p><img src="../img/snippets/selection-tools-343x184.png#right" alt="selection tools" width="343" height="184"></p>
+<p>Clicking on the <span class="settings-icon" role="img" aria-label="settings"></span> icon, which appears below the data table as soon as data records are selected, opens the layer with the tools available for actions on the selection.</p>
+<p class="clear" />
+
+<p>By using <strong><em>invert selection</em></strong> the selection state is changed for all records in the table.</p>
+<p>After using <strong><em>clear selection</em></strong> no records are selected anymore.</p>
+<p><strong><em>delete selected rows</em></strong> will ask for confirmation before the selected data sets are deleted from the table.</p>
+<p><strong><em>export data</em></strong> in the selection tools exports the selected data records in Dexie, JSON or CSV format. Except for the limitation of the amount of data by the selection, the use is identical to the <a href="#export-data">table tools: export</a> functionality. The settings available when exporting are described in the <a href="../configuration/#export">Configuration / Export</a> section.</p>
+<h2 id="javascript-textarea">JavaScript Textarea</h2>
+<p>The text area is displayed below the data table by default, but can be hidden in the <a href="../configuration/#behavior">behavior configuration</a>, item <span class="b"></span>. In addition to executing arbitrary JavaScript, the text area is used to edit data records (see item <span class="i"></span> <a href="./">above</a>) and to <a href="../database/#modify-database-schema">modify database schemas</a>.</p>
+<p><img src="../img/snippets/javascript-textarea-486x174.png#center" alt="javascript textarea" width="486" height="174"></p>
+<p>Some global variables are available for use in the JavaScript code:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db</td>
+<td><a href="https://dexie.org/docs/Dexie/Dexie">Dexie database object</a> as returned from <code>await Dexie.open('dbname')</code> of the currently selected database.</td>
+</tr>
+<tr>
+<td>table</td>
+<td><a href="https://dexie.org/docs/Table/Table">Dexie Table object</a> of the currently selected object store.</td>
+</tr>
+<tr>
+<td>selection</td>
+<td><a href="https://dexie.org/docs/Collection/Collection">Dexie Collection object</a> of the selected data records.</td>
+</tr>
+<tr>
+<td>row</td>
+<td>a JavaScript object holding the data of a record that has been selected for editing. Only available when editing data.</td>
+</tr>
+</tbody>
+</table>
+<p>The chevron navigation below the textarea can be used to switch between saved JavaScript codes. If the navigation is in the first position, the letter <strong>u</strong> signals that the code is <strong>u</strong>nsaved. The icons on the right side of the navigation appear depending on the state of the entered code. The <span class="stack-push-icon" role="img" aria-label="save code"></span> icon is used to save a new code, the <span class="stack-middle-icon" role="img" aria-label="update code"></span> to update a changed code and the <span class="stack-pop-icon" role="img" aria-label="delete code"></span> to delete a previously saved code.</p>
 
 
 

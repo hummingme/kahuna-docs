@@ -24,6 +24,19 @@
     <path d="M18 4v1" />
     <path d="M18 9v11" />
   </g>
+  <g id="tabler-adjustments-search">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M6 4v4" />
+    <path d="M6 12v8" />
+    <path d="M12 14a2 2 0 0 0 -1.042 3.707" />
+    <path d="M12 4v10" />
+    <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M18 4v1" />
+    <path d="M18 9v2" />
+    <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M20.2 20.2l1.8 1.8" />
+  </g>
   <g id="tabler-check">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path d="M5 12l5 5l10 -10"></path>
@@ -59,6 +72,26 @@
     <path d="M9 12h6" />
     <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
   </g>
+  <g id="tabler-stack-middle">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M16 10l4 -2l-8 -4l-8 4l4 2" />
+    <path d="M12 12l-4 -2l-4 2l8 4l8 -4l-4 -2l-4 2z" fill="currentColor" />
+    <path d="M8 14l-4 2l8 4l8 -4l-4 -2" />
+  </g>
+  <g id="tabler-stack-pop">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M7 9.5l-3 1.5l8 4l8 -4l-3 -1.5" />
+    <path d="M4 15l8 4l8 -4" />
+    <path d="M12 11v-7" />
+    <path d="M9 7l3 -3l3 3" />
+  </g>
+  <g id="tabler-stack-push">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M6 10l-2 1l8 4l8 -4l-2 -1" />
+    <path d="M4 15l8 4l8 -4" />
+    <path d="M12 4v7" />
+    <path d="M15 8l-3 3l-3 -3" />
+  </g>
   <g id="tabler-trash">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
     <line x1="4" y1="7" x2="20" y2="7" />
@@ -67,5 +100,9 @@
     <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
   </g>
-
+  <g id="tabler-x" viewBox="0 0 24 24">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M18 6l-12 12" />
+    <path d="M6 6l12 12" />
+  </g>
 </svg>

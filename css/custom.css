@@ -56,6 +56,9 @@ span[class$='-icon'] {
 .adjustments-icon {
     background-image: url(icons.svg#tabler-adjustments);
 }
+.adjustments-search-icon {
+    background-image: url(icons.svg#tabler-adjustments-search);
+}
 .check-icon {
     background-image: url(icons.svg#tabler-check);
 }
@@ -77,8 +80,20 @@ span[class$='-icon'] {
 .square-rounded-minus-icon {
     background-image: url(icons.svg#tabler-square-rounded-minus);    
 }
+.stack-push-icon {
+    background-image: url(icons.svg#tabler-stack-push);        
+}
+.stack-middle-icon {
+    background-image: url(icons.svg#tabler-stack-middle);        
+}
+.stack-pop-icon {
+    background-image: url(icons.svg#tabler-stack-pop);
+}
 .trash-icon {
     background-image: url(icons.svg#tabler-trash);    
+}
+.x-icon {
+    background-image: url(icons.svg#tabler-x);    
 }
 
 div.map {
@@ -121,6 +136,20 @@ div.map + ol {
 .k::before { content: "Ⓚ"; }
 .l::before { content: "Ⓛ"; }
 
+div.datatable {
+    height: 331px;
+    width: 597px;
+    .a { top: 8%; left: 51.5%; }
+    .b { top: 13%; left: 0.3%; }
+    .c { top: 18.7%; left: 20%; }
+    .d { top: 12.4%; left: 40.5%; }
+    .e { top: 12.5%; left: 71%; }
+    .f { top: 31.5%; left: 28%; }
+    .g { top: 31.8%; left: 92.5%; }
+    .h { top: 56.5%; left: 30%; }
+    .i { top: 74%; left: 93%; }
+    .j { top: 89.9%; left: 69.5%; }
+}
 div.application-settings {
     height: 283px;
     width: 516px;
