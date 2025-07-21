@@ -366,6 +366,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copy-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#empty-table" class="md-nav__link">
     <span class="md-ellipsis">
       Empty Table
@@ -491,6 +500,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copy-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#empty-table" class="md-nav__link">
     <span class="md-ellipsis">
       Empty Table
@@ -592,39 +610,45 @@
 <p>Clicking on a data row selects the row, clicking again deselects it. Selected rows are displayed with a different background color, and their total number is shown in <span class="j" role="img" aria-label="item j"></span>.</p>
 </li>
 <li>
-<p>When the mouse hover over a table row, icons appear that allow to delete or edit the displayed data. The editing of row data is done in a textarea below the datatable as javascript code.</p>
+<p>When the mouse hover over a table row, icons appear that allow to delete or edit the displayed data. The editing of row data is done in a <a href="#javascript-textarea">textarea</a> below the datatable as javascript code.</p>
 </li>
 <li>
 <p>Below the datatable, information about and actions for the selected records are displayed. The <strong><strong>select all</strong></strong> checkbox de-/selects all data rows that are displayed based on the filter entries. The <strong><strong>select page</strong></strong> checkbox does the same with the data rows on the currently displayed on the screen. The <span class="settings-icon" role="img" aria-label="settings"></span> icon behind the number of selected records is used to display the <a href="#selection-tools">selection tools</a>.</p>
 </li>
 </ol>
 <h2 id="table-tools">Table Tools</h2>
-<p><img src="../img/snippets/datatable-tools-256x180.png#left" alt="table tools" width="256" height="180"></p>
+<p><img src="../img/snippets/datatable-tools-256x206.png#left" alt="table tools: menu list" width="256" height="206"></p>
 <p>While in the datatable view, the table tools are accessed via the <span class="settings-icon" role="img" aria-label="settings"></span> icon displayed in the window title. In addition, the table tools can be accessed by clicking on the gear icon that appears when hovering over a row of the <a href="../database/#table-list">table list</a> in the database view.</p>
 <p class="clear" />
 
 <h3 id="import-data">Import Data</h3>
-<p><img src="../img/snippets/datatable-tools-import-212x148.png#right" alt="table tools import" width="212" height="148"></p>
+<p><img src="../img/snippets/datatable-tools-import-212x148.png#right" alt="table tools: import" width="212" height="148"></p>
 <p>Select which data format to use for the import: Dexie, JSON or CSV. After a file is selected, the contained data is imported into the displayed table and when finished, the datatable view is updated. Hovering over the <span class="info-icon" role="img" aria-label="info"></span> icon displays the relevant import settings for the selected format and provides a shortcut to adjust the <a href="../configuration/#import">import configuration</a>. </p>
 <p class="clear" />
 
 <h3 id="export-data">Export Data</h3>
-<p><img src="../img/snippets/datatable-tools-export-300x202.png#right" alt="table tools export" width="300" height="202"></p>
+<p><img src="../img/snippets/datatable-tools-export-300x202.png#right" alt="table tools: export" width="300" height="202"></p>
 <p>Using the dropdown list, the export format can be changed between Dexie format, JSON and CSV. The file name for the export file follows the <a href="../configuration/#filename-templates">pattern</a> saved in the export configuration. If the filename field is selected, the pattern is displayed and can be edited. A modified pattern is saved in the configuration of the table. If the mouse hovers over the <span class="info-icon" role="img" aria-label="info"></span> icon, a layer with the export settings relevant for the selected format is displayed. The <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon present in this settings layer can be used to adjust the export configuration.</p>
 <p class="clear" />
 
+<h3 id="copy-table">Copy Table</h3>
+<p><img src="../img/snippets/datatable-tools-copy-table-276x194.png#left" alt="table tools: copy table" width="276" height="194"></p>
+<p>In <strong><em>copy table</em></strong> a copy of the source table is created by clicking on the <em>execute</em> button. The <em>table name</em> to use for the newly created table is pre-filled with an unique name. All existing host databases can be selected as <em>target database</em> with the default that the table is created in the source database.</p>
+<p>If <em>copy data</em> is not checked, an empty table is created with the indexes of the source table. The last checkbox determines what happens after the copy is created, whether the copy is displayed afterwards or whether the view of the source table remains.</p>
+<p class="clear" />
+
 <h3 id="empty-table">Empty Table</h3>
-<p><img src="../img/snippets/datatable-tools-empty-table-255x162.png#left" alt="table tools empty table" width="255" height="162"></p>
+<p><img src="../img/snippets/datatable-tools-empty-table-255x162.png#left" alt="table tools: empty table" width="255" height="162"></p>
 <p>By clicking on <strong><em>empty table</em></strong> and subsequent confirming, all existing records will be deleted from the table.</p>
 <p class="clear" />
 
 <h3 id="drop-table">Drop Table</h3>
-<p><img src="../img/snippets/datatable-tools-drop-table-212x143.png#left" alt="table tools empty table" width="212" height="143"></p>
+<p><img src="../img/snippets/datatable-tools-drop-table-212x143.png#left" alt="table tools: drop table" width="212" height="143"></p>
 <p>After confirmation, the table and all data it contains will be irrevocably deleted. Since the action modifies the database schema, the database version is incremented by 1.</p>
 <p class="clear" />
 
 <h2 id="selection-tools">Selection Tools</h2>
-<p><img src="../img/snippets/selection-tools-343x184.png#right" alt="selection tools" width="343" height="184"></p>
+<p><img src="../img/snippets/selection-tools-343x184.png#right" alt="selection tools: menu list" width="343" height="184"></p>
 <p>Clicking on the <span class="settings-icon" role="img" aria-label="settings"></span> icon, which appears below the data table as soon as data records are selected, opens the layer with the tools available for actions on the selection.</p>
 <p class="clear" />
 
@@ -633,7 +657,7 @@
 <p><strong><em>delete selected rows</em></strong> will ask for confirmation before the selected data sets are deleted from the table.</p>
 <p><strong><em>export data</em></strong> in the selection tools exports the selected data records in Dexie, JSON or CSV format. Except for the limitation of the amount of data by the selection, the use is identical to the <a href="#export-data">table tools: export</a> functionality. The settings available when exporting are described in the <a href="../configuration/#export">Configuration / Export</a> section.</p>
 <h2 id="javascript-textarea">JavaScript Textarea</h2>
-<p>The text area is displayed below the data table by default, but can be hidden in the <a href="../configuration/#behavior">behavior configuration</a>, item <span class="b"></span>. In addition to executing arbitrary JavaScript, the text area is used to edit data records (see item <span class="i"></span> <a href="./">above</a>) and to <a href="../database/#modify-database-schema">modify database schemas</a>.</p>
+<p>The text area is displayed below the data table by default, but can be hidden in the <a href="../configuration/#behavior">behavior configuration</a>, item <span class="b"></span>. In addition to executing arbitrary JavaScript, the text area is used to edit data records (see item <span class="i"></span> <a href="./">above</a>).</p>
 <p><img src="../img/snippets/javascript-textarea-486x174.png#center" alt="javascript textarea" width="486" height="174"></p>
 <p>Some global variables are available for use in the JavaScript code:</p>
 <table>

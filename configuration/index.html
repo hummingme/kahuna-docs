@@ -581,14 +581,15 @@
 </ol>
 <h2 id="behavior">Behavior</h2>
 <p>The image shows how to configure Kahuna's behavior for the selected table <em>meteroites</em>, while displaying this table in the <a href="../datatable/">datatable</a> view. To configure settings for all tables in a database or globally, first switch to the database settings or the global settings via the <span class="square-rounded-chevron-down-icon" role="img" aria-label="chevron down"></span> icon.</p>
-<div class="map behavior-settings" width="463" height="303">
-  <img src="../img/snippets/configuration-behavior-463x303.png#center" alt="behavior settings" width="463" height="303">
+<div class="map behavior-settings" width="464" height="337">
+  <img src="../img/snippets/configuration-behavior-464x337.png#center" alt="behavior settings" width="464" height="337">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
   <div class="d"></div>
   <div class="e"></div>
   <div class="f"></div>
+  <div class="g"></div>
 </div>
 
 <ol>
@@ -602,6 +603,9 @@
 <p>If checked, a text with the available global variables is displayed in the <a href="../datatable/#javascript-textarea">JavaScript textarea</a>.</p>
 </li>
 <li>
+<p>Select the preferred method for executing code entered in the JavaScript textarea. In Firefox, where Manifest version 2 is used, the methods <strong><em>webworker</em></strong> and <strong><em>unsafeEval</em></strong> are available. With <em>webworker</em>, the execution is isolated and the application is not blocked or affected. With <em>unsafeEval</em>, the code gets access to the web page's environment, allowing interactions with the DOM. In Chromium-based browsers using Manifest 3, <em>webworker</em> is the only option, as <code>unsafe-eval</code> is blocked by the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a>.</p>
+</li>
+<li>
 <p>The number of rows the <a href="../datatable/">datatable</a> displays on a page.</p>
 </li>
 <li>
@@ -613,23 +617,27 @@
 </ol>
 <h2 id="columns">Columns</h2>
 <p>In the columns configuration the <strong><em>columns for data fields</em></strong> section only exists when the settings are made for an individual table. While database-wide or global settings are chosen, only <span class="a" role="img" aria-label="item a"></span> can be set as the default for all tables.</p>
-<div class="map columns-settings" width="547" height="305">
-  <img src="../img/snippets/configuration-columns-547x305.png#center" alt="columns settings" width="547" height="305">
+<div class="map columns-settings" width="548" height="302">
+  <img src="../img/snippets/configuration-columns-548x302.png#center" alt="columns settings" width="548" height="301">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
   <div class="d"></div>
+  <div class="e"></div>
 </div>
 
 <ol>
 <li>
-<p>When invoked, the datatable analyses the data of the first page to identify the existing columns. If the data objects on subsequent pages have additional properties, this setting determines how they are handled. If checked, they are immediately added to the table as columns. If not checked, an indicator with the number of the found properties is displayed. Hovering the indicator allows you to add them all as columns or to switch to the columns configuration.</p>
+<p>When invoked, the datatable analyses the data of the first page to identify the existing columns. If the data objects on subsequent pages have additional properties, this setting determines how they are handled. If checked, they are immediately added to the table as columns. If not checked, an indicator with the number of the found properties will be displayed to the right of the column headers. Hovering the indicator allows you to add them all as columns or to switch to the columns configuration.</p>
+</li>
+<li>
+<p>Specifies the dimension with which image previews are displayed.</p>
 </li>
 <li>
 <p>Grab a position number with the mouse to change the column order by drag &amp; drop.</p>
 </li>
 <li>
-<p><strong><em>date</em></strong> and <strong><em>url</em></strong> are the selectable format options that are applied when the column contains suitable data for formatting. For <em>date</em> this are integer values ​​which when interpreted as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date">timestamps</a>(either by themselves or multiplied by 1000), are within the period from 10 years in the past to 20 years in the future. For <strong>url</strong> it must be a string that begins with <code>https:</code>, <code>http:</code> or <code>file:</code>, or the string must look like a web address in order to be displayed as an outgoing link.</p>
+<p><em>date</em>, <em>url</em>, and <em>image</em> are the selectable format options that are applied when the column contains suitable data for formatting. For <strong><em>date</em></strong> this are Integer values ​​which when interpreted as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date">timestamps</a>(either by themselves or multiplied by 1000), are within the period from 10 years in the past to 20 years in the future. For <strong><em>url</em></strong> it must be a String that begins with <code>https:</code>, <code>http:</code> or <code>file:</code>, or the string must look like a web address in order to be displayed as an outgoing link. To be displayed as an <strong><em>image</em></strong> preview, a data value must be a Blob or a File whose type property is a MimeType that can be displayed by web browsers as an image</p>
 </li>
 <li>
 <p>Unckeck to hide a column from the datatable view. The column in which the primary key is displayed cannot be hidden.</p>
