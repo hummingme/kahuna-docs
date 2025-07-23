@@ -498,11 +498,11 @@
 
 <h1 id="origin-view">Origin View</h1>
 <p>IndexedDB databases are stored by following the same-origin policy. A website can store and access data only for its own origin, consisting of protocol, domain and port, and Kahuna displays the databases stored for an origin. This databases, if any, are listed on the initial view when Kahuna is invoked. If no databases exist you get offered to import a database or to create a new one. While in the origin view, importing and creating new databases is also posible by clicking on the <span class="settings-icon" role="img" aria-label="settings"></span> icon in the window title bar. The same gear icon in the title bar invokes the <a href="../database/#database-tools">database tools</a> while in the database view and the <a href="../datatable/#table-tools">table tools</a> if a datatable is displayed.</p>
-<p>The <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon in the window title bar of the database list invokes the application's global configuration and settings, which also serve as default settings for all databases and tables.</p>
+<p>The <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon in the window title bar of the database list invokes the application's global <a href="../configuration/">configuration and settings</a>, which also serve as default settings for all databases and tables.</p>
 <h2 id="database-list">Database List</h2>
 <p><img src="../img/snippets/origin-list-406x246.png#left" alt="list of databases" width="406" height="246"></p>
 <p>To refresh the list or to return to this list from another view, click on the origin part of the breadcrump in the window title. To display the <a href="../database/#table-list">table list</a> with the details for one of the listed databases, click on the corresponding row in the table.</p>
-<p>In the <a href="../configuration/#application">application settings</a>, item <span class="c" role="img" aria-label="c"></span>, you can enter table names that should not appear in the list. Empty tables are listed here by default, even if they are excluded from notifications in the settings, item <span class="b" role="img" aria-label="b"></span>.</p>
+<p>In the <a href="../configuration/#application">application settings</a>, item <span class="c" role="img" aria-label="c"></span>, you can enter table names that should not appear in the database list. Empty tables are listed here by default, even if they are excluded from notifications in the settings, item <span class="b" role="img" aria-label="b"></span>.</p>
 <p>When hovering a row, another <span class="settings-icon" role="img" aria-label="settings"></span> icon fades in that let you apply the <a href="../database/#database-tools">database related tools</a>. </p>
 <p class="clear" />
 
@@ -510,7 +510,7 @@
 <p>The layer with the origin tools is displayed when <span class="settings-icon" role="img" aria-label="settings"></span> is clicked in the window title bar of the database list. With the origin tools, databases can be imported and new, empty databases can be created.</p>
 <h3 id="import-database">Import Database</h3>
 <p><img src="../img/snippets/origin-tools-import-212x189.png#right" alt="origin tools import database" width="219" height="189">
-A new database will be created or an existing database will be overwritten if a file in Dexie format is selected. The settings applied are listed when the <span class="info-icon" role="img" aria-label="info"></span> icon is hovered. Most of the settings are relevant only for overwriting an existing database and they are explained in <a href="../configuration/#import">import configuration</a>. Once a file has been selected, the import will start; no further activation is requested.</p>
+A new database will be created or an existing database will be overwritten if a file in <a href="https://dexie.org/docs/ExportImport/dexie-export-import#json-format">Dexie format</a> is selected. The settings applied are listed when the <span class="info-icon" role="img" aria-label="info"></span> icon is hovered. Most of the settings are relevant only for overwriting an existing database and they are explained in <a href="../configuration/#import">import configuration</a>. Once a file has been selected, the import will start; no further activation is requested.</p>
 <p class="clear" />
 
 <h3 id="create-database">Create Database</h3>
