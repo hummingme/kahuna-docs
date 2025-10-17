@@ -151,13 +151,17 @@ div.datatable {
     .j { top: 89.9%; left: 69.5%; }
 }
 div.application-settings {
-    height: 283px;
-    width: 516px;
-    .a { top: 26.5%; left: -4.5%; }
-    .b { top: 38.5%; left: -4.5%; }
-    .c { top: 50%; left: -4.5%; }
-    .d { top: 60.5%; left: -4.5%; }
-    .e { top: 74%; left: -4.5%; }
+    height: 423px;
+    width: 497px;
+    .a { top: 18%; left: -4.5%; }
+    .b { top: 25.5%; left: -4.5%; }
+    .c { top: 33.5%; left: -4.5%; }
+    .d { top: 41.8%; left: -4.5%; }
+    .e { top: 50%; left: -4.5%; }
+    .f { top: 58.5%; left: -4.5%; }
+    .g { top: 66.5%; left: -4.5%; }
+    .h { top: 73.5%; left: -4.5%; }
+    .i { top: 82.2%; left: -4.5%; }
 }
 div.behavior-settings {
     height: 337px;

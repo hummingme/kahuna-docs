@@ -553,13 +553,17 @@
 <h2 id="application">Application</h2>
 <p>The application tab is used for settings that control the properties of the application itself and not how databases, tables or data are handled. If this tab is not displayed, use the <span class="square-rounded-chevron-down-icon" role="img" aria-label="chevron down"></span> icon and switch to the settings for <em><strong>global
  application and defaults</strong></em>.</p>
-<div class="map application-settings" width="516" height="283">
-  <img src="../img/snippets/configuration-application-516x283.png#center" alt="application settings" width="516" height="283">
+<div class="map application-settings" width="497" height="423">
+  <img src="../img/snippets/configuration-application-497x423.png#center" alt="application settings" width="497" height="423">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
   <div class="d"></div>
   <div class="e"></div>
+  <div class="f"></div>
+  <div class="g"></div>
+  <div class="h"></div>
+  <div class="i"></div>
 </div>
 
 <ol>
@@ -570,7 +574,19 @@
 <p>Specifies whether <span class="a" role="img" aria-label="item a"></span> should be applied for the origin of the currently displayed website or whether a dark or light color scheme should be used instead.</p>
 </li>
 <li>
-<p>If set, empty databases (databases that do not contain any tables) are not counted for the notification in the browser action tooltip. Databases that contain only empty tables without records are not considered empty. Empty databases are always included in the <a href="../origin/#database-list">database list</a> unless they are excluded in <span class="d" role="img" aria-label="item d"></span>. </p>
+<p>The color used to display strings in light mode. To change the color, click the color field to invoke a color switcher.</p>
+</li>
+<li>
+<p>The color for numbers in light mode.</p>
+</li>
+<li>
+<p>The color for strings in dark mode.</p>
+</li>
+<li>
+<p>The color for numbers in light mode.</p>
+</li>
+<li>
+<p>If set, empty databases (databases that do not contain any tables) are not counted for the notification in the browser action tooltip. Databases that contain only empty tables without records are not considered empty. Empty databases are always included in the <a href="../origin/#database-list">database list</a> unless they are excluded in <span class="h" role="img" aria-label="item h"></span>. </p>
 </li>
 <li>
 <p>A list of database names that should neither be counted for the notification tooltip nor appear in the database list. Use the <span class="square-rounded-plus-icon" role="img" aria-label="plus"></span> icon to add names and the <span class="square-rounded-minus-icon" role="img" aria-label="minus"></span> icon behind a name to remove it from the list. The default entry <em>__dbnames</em> is used by the dexie library for older browsers that do not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">listing all existing databases</a>.</p>
