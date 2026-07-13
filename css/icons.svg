@@ -24,6 +24,20 @@
     <path d="M18 4v1" />
     <path d="M18 9v11" />
   </g>
+  <g id="tabler-adjustments-code">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M6 4v4" />
+    <path d="M6 12v8" />
+    <path d="M13.557 14.745a2 2 0 1 0 -1.557 3.255" />
+    <path d="M12 4v10" />
+    <path d="M12 18v2" />
+    <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M18 4v1" />
+    <path d="M18 9v4" />
+    <path d="M20 21l2 -2l-2 -2" />
+    <path d="M17 17l-2 2l2 2" />
+  </g>
   <g id="tabler-adjustments-search">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
     <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -51,6 +65,11 @@
     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
     <path d="M12 9h.01" />
     <path d="M11 12h1v4h1" />
+  </g>
+  <g id="tabler-pencil">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+	<path d="M13.5 6.5l4 4" />
   </g>
   <g id="tabler-settings">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
