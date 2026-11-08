@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://hummingme.github.io/kahuna-docs/configuration/">
       
       
-        <link rel="prev" href="../datatable/">
+        <link rel="prev" href="../javascript-console/">
       
       
       
@@ -311,6 +311,33 @@
     
   
     Datatable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript Console
   
 
     
@@ -662,8 +689,8 @@
 </ol>
 <h2 id="behavior">Behavior</h2>
 <p>The image shows how to configure Kahuna's behavior for the selected table <em>meteroites</em>, while displaying this table in the <a href="../datatable/">datatable</a> view. To configure settings for all tables in a database or globally, first switch to the database settings or the global settings via the <span class="square-rounded-chevron-down-icon" role="img" aria-label="chevron down"></span> icon.</p>
-<div class="map behavior-settings" width="478" height="433">
-  <img src="../img/snippets/configuration-behavior-478x433.png#center" alt="behavior settings" width="478" height="433">
+<div class="map behavior-settings" width="446" height="433">
+  <img src="../img/snippets/configuration-behavior-446x433.png#center" alt="behavior settings" width="446" height="433">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
@@ -681,10 +708,10 @@
 <p>By default, a confirmation is requested when <strong><em>delete row</em></strong> is clicked for a record in the <a href="../datatable/">datatable</a>. Uncheck this option to disable the confirmation request before deletion.</p>
 </li>
 <li>
-<p>Specifies whether a <a href="../datatable/#javascript-textarea">JavaScript textarea</a> is displayed beneath the datatable.</p>
+<p>When checked, all characters outside of the Unicode code points 31-126 are displayed in the datatable as escape sequences. Otherwise, if not activated, only the characters of the Unicode categories Z / Separator (except for the ordinary space character, 0x32) and C / Other are escaped.</p>
 </li>
 <li>
-<p>If checked, a text with the available global variables is displayed in the <a href="../datatable/#javascript-textarea">JavaScript textarea</a> as long as no code is entered.</p>
+<p>This setting determines whether Date values ​​are formatted in the local time zone when displayed, edited, and queried. The local time zone is determined by the operating system and propagated by the browser. If not checked, Date values ​​are interpreted as UTC (Coordinated Universal Time) values.</p>
 </li>
 <li>
 <p>By default, a <strong><em>webworker</em></strong> is used to query the datatable, as this does not block the interface. However, in cases where querying via webworker causes an error and <strong><em>unsafeEval</em></strong> is also available as an execution method, it is possible to switch the method here.</p>
@@ -710,8 +737,8 @@
 </ol>
 <h2 id="columns">Columns</h2>
 <p>In the columns configuration the <strong><em>columns for data fields</em></strong> section only exists when the settings are made for an individual table. While database-wide or global settings are chosen, only <span class="a" role="img" aria-label="item a"></span> and <span class="b" role="img" aria-label="item b"></span> can be set as the default for all tables.</p>
-<div class="map columns-settings" width="548" height="302">
-  <img src="../img/snippets/configuration-columns-548x302.png#center" alt="columns settings" width="548" height="301">
+<div class="map columns-settings" width="548" height="298">
+  <img src="../img/snippets/configuration-columns-548x298.png#center" alt="columns settings" width="548" height="298">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
@@ -721,7 +748,7 @@
 
 <ol>
 <li>
-<p>When invoked, the datatable analyses the data of the first page to identify the existing columns. If the data objects on subsequent pages have additional properties, this setting determines how they are handled. If checked, they are immediately added to the table as columns. If not checked, an indicator with the number of the found properties will be displayed to the right of the column headers. Hovering the indicator allows you to add them all as columns or to switch to the columns configuration.</p>
+<p>When invoked, the datatable analyses the data of the first page to identify the existing columns. If the data objects on subsequent displayed pages have additional properties, this setting determines how they are handled. If checked, they are immediately added to the table as columns. If not checked, an indicator with the number of the new found properties will be displayed to the right of the column headers. Hovering the indicator allows you to add them all as columns or to switch to the columns configuration.</p>
 </li>
 <li>
 <p>Specifies the dimension with which image previews are displayed.</p>
@@ -730,7 +757,7 @@
 <p>Grab a position number with the mouse to change the column order by drag &amp; drop.</p>
 </li>
 <li>
-<p><em>date</em>, <em>url</em>, and <em>image</em> are the selectable format options that are applied when the column contains suitable data for formatting. For <strong><em>date</em></strong> this are Integer values ​​which when interpreted as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date">timestamps</a>(either by themselves or multiplied by 1000), are within the period from 10 years in the past to 20 years in the future. For <strong><em>url</em></strong> it must be a String that begins with <code>https:</code>, <code>http:</code> or <code>file:</code>, or the string must look like a web address in order to be displayed as an outgoing link. To be displayed as an <strong><em>image</em></strong> preview, a data value must be a Blob or a File whose type property is a MimeType that can be displayed by web browsers as an image.</p>
+<p><a id="point-column-format"></a><em>date</em>, <em>date/1000</em>, <em>url</em>, and <em>image</em> are the selectable format options that are applied when the column contains suitable data for formatting. For <strong><em>date</em></strong>  this are Integer values ​​which, when interpreted as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date">timestamps</a>, represent a valid Date value. The same applies for <strong><em>date/1000</em></strong>, only that the numbers are multiplied by 1000 before beeing used as timestamp, making this the correct format for stored Unix timestamps (seconds since epoche). For <strong><em>url</em></strong> it must be a String that begins with <code>https:</code>, <code>http:</code> or <code>file:</code>, or the string must look like a web address in order to be displayed as an outgoing link. To be displayed as an <strong><em>image</em></strong> preview, a data value must be a Blob or a File whose type property is a MimeType that can be displayed by web browsers as an image.</p>
 </li>
 <li>
 <p>Unckeck to hide a column from the datatable view. The column in which the primary key is displayed cannot be hidden.</p>
@@ -738,8 +765,8 @@
 </ol>
 <h2 id="filters">Filters</h2>
 <p>The filters tab is primarily used to define the filters that are displayed above a datatable. While the global or database-wide settings are being configured, this view is mostly empty, except <span class="g" role="img" aria-label="item g"></span>.</p>
-<div class="map filters-settings" width="480" height="404">
-  <img src="../img/snippets/configuration-filters-480x404.png" alt="filters settings" width="480" height="404">
+<div class="map filters-settings" width="489" height="464">
+  <img src="../img/snippets/configuration-filters-489x464.png" alt="filters settings" width="489" height="464">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
@@ -747,6 +774,8 @@
   <div class="e"></div>
   <div class="f"></div>
   <div class="g"></div>
+  <div class="h"></div>
+  <div class="i"></div>
 </div>
 
 <ol>
@@ -766,12 +795,24 @@
 <p>Click any of the <span class="trash-icon" role="img" aria-label="trashcan"></span> icons to remove a filter.</p>
 </li>
 <li>
+<p><a id="point-date-filter"></a>The date picker selection list is displayed when a column is selected that either contains date values ​​or for which the column configuration specifies the <a href="#point-column-format">format</a> <em>date</em> or <em>date/1000</em>. The available time period options are <em>year</em>, <em>month</em>, <em>date</em>, <em>datetime</em> and <em>millisecond</em>. Where available for the selected period, the browser's native date picker elements are used for the filter; otherwise, input-validated text fields are used. The filter element is displayed with two additional buttons to set the previous and subsequent time periods.</p>
+</li>
+<li>
+<p>Date picker filters are used as time span filters when this option is enabled. In this case, it functions like two combined <em>&gt;=</em> and <em>&lt;=</em> filters for the date value selected in the filter. The presence of this option requires that the filter method is <em>=</em> or <em>≠</em> and that <em>year</em>, <em>month</em> or <em>date</em> is selected as period for the filter.</p>
+</li>
+<li>
 <p>Click the <span class="square-rounded-plus-icon" role="img" aria-label="plus"></span> icon to add a filter.</p>
 </li>
 <li>
 <p>When checked, filter settings and filters are highlighted when no index is used to apply them. This is not a problem for small tables (say a few thousand records) or if the number of records to which they are applied is reduced by additional, indexed filters. However, for large tables and without additional index-based result restrictions, the search will be significantly slower.</p>
 </li>
 </ol>
+<p><a id="filter-evaluation"></a>Filter input is evaluated before it is applied in order to filter the matching data:</p>
+<ul>
+<li>If the filter input matches a number in an <strong>=</strong>, <strong>&lt;</strong>, <strong>&gt;</strong> , or <strong>≠</strong> filter, a numeric search is performed, not a text search. All number notations are recognized (integer, float, exponential, hexadecimal, octal, binary), as well as Infinity, -Infinity, NaN, and the static properties of Number and Math that represent numerical values ​​(Math.PI, Number.MAX_VALUE, etc.).</li>
+<li>Escape sequences in the input are replaced by their corresponding characters. Short escapes (<code>\n</code>), two-digit hexadecimal escapes (<code>\x20</code>), four-digit unicode escapes (<code>\u2192</code>), and bracketed unicode code point escapes (<code>\u{1F389}</code>) are supported. An escaped backslash is replaced by a single backslash.</li>
+<li>If the filter input begins with an apostrophe(<code>'</code>), a forced text search is performed without replacing escape sequences or interpreting the input numerically. If the input consists of a single apostrophe, empty strings will be matched.</li>
+</ul>
 <h2 id="import">Import</h2>
 <p>The screenshot shows the default settings for importing data from files in Dexie, JSON or CSV format. Some options are only relevant for certain import formats or for certain import scenarios. Details can be found in the explanations for the individual items.</p>
 <div class="map import-settings" width="541" height="490">
@@ -830,8 +871,8 @@
 </ol>
 <h2 id="export">Export</h2>
 <p>The screenshot shows the default settings that are applied when exporting data in Dexie, JSON and CSV format.</p>
-<div class="map export-settings" width="519" height="371">
-  <img src="../img/snippets/configuration-export-519x371.png" alt="export settings" width="519" height="371">
+<div class="map export-settings" width="541" height="375">
+  <img src="../img/snippets/configuration-export-541x375.png" alt="export settings" width="541" height="375">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>

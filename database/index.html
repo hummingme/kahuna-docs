@@ -473,6 +473,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../javascript-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../configuration/" class="md-nav__link">
         
   
@@ -635,14 +662,14 @@
 
 <h1 id="database-view">Database View</h1>
 <p>Central to this view is a list in which the tables (aka object stores) belonging to a database are displayed. If it is an empty database that does not contain any tables, there is a link that can be used to invoke <a href="#create-table">Create Table</a>.</p>
-<p>In the database view, the <span class="settings-icon" role="img" aria-label="settings"></span> icon in the window title bar opens the <a href="#database-tools">database tools</a>, while the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon opens the <a href="../configuration/">configuration</a> options that apply to this database and serve as default settings for the tables it contains.</p>
+<p>In the database view, the <span class="settings-icon" role="img" aria-label="tools"></span> icon in the window title bar opens the <a href="#database-tools">database tools</a>, while the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon opens the <a href="../configuration/">configuration</a> options that apply to this database and serve as default settings for the tables it contains. Accessing the <a href="../javascript-console/">JavaScript console</a> via the <span class="console-icon" role="img" aria-label="console"></span> icon provides access to Dexie and the selected database.</p>
 <p>Clicking on the database part of the breadcrumb navigation reloads the database list or returns to it if a <a href="../datatable/">datatable</a> is displayed in the current view.</p>
 <h2 id="table-list">Table List</h2>
 <p>For each table, its name, its primary key, additional indexes, and the number of records it contains are displayed. </p>
-<p><img src="../img/snippets/table-list-536x241.png#center" alt="table list in database view" width="536" height="241"></p>
-<p>If you hover one of the rows, another <span class="settings-icon" role="img" aria-label="settings"></span> icon will appear next to the row, which can be used to open the <a href="../datatable/#table-tools">table tools</a>. To switch to the view of one of the <a href="../datatable/">data tables</a>, click on the corresponding row in the table.</p>
+<p><img src="../img/snippets/database-list-536x224.png#center" alt="table list in database view" width="536" height="224"></p>
+<p>If you hover one of the rows, another <span class="settings-icon" role="img" aria-label="tools"></span> icon will appear next to the row, which can be used to open the <a href="../datatable/#table-tools">table tools</a>. To switch to the view of one of the <a href="../datatable/">data tables</a>, click on the corresponding row in the table.</p>
 <h2 id="database-tools">Database Tools</h2>
-<p>To invoke the database tools use either the gear icon <span class="settings-icon" role="img" aria-label="settings"></span> in the window title bar of the database view or the same icon next to a database row in the <a href="../origin/">origin view</a>. You can choose to export the database, create a copy, edit the database schema, create additional tables, import data or to delete the database.</p>
+<p>To invoke the database tools use either the gear icon <span class="settings-icon" role="img" aria-label="tools"></span> in the window title bar of the database view or the same icon next to a database row in the <a href="../origin/">origin view</a>. You can choose to export the database, create a copy, edit the database schema, create additional tables, import data or to delete the database.</p>
 <p><img src="../img/snippets/origin-list-database-tools-403x329.png#center" alt="database tools: menu list" width="403" height="329"></p>
 <h3 id="export-database">Export Database</h3>
 <p>The database export uses the <a href="https://www.npmjs.com/package/dexie-export-import#user-content-example-json-file">dexie format</a> for the output file, a json-based format that supports all data types (beside CryptoKey) that can be stored in IndexedDB databases.</p>
@@ -657,12 +684,12 @@
 
 <h3 id="edit-schema">Edit Schema</h3>
 <p>Using the schema editor, new object stores can be created: Clicking the <span class="square-rounded-plus-icon" role="img" aria-label="plus"></span> icon at the lower right adds a row to the table in which a table name, the primary key and additional indices can be specified. Clicking the <span class="square-rounded-minus-icon" role="img" aria-label="minus"></span> icon at the end of a row deletes object stores. After clicking <strong><em>execute</em></strong> the database schema updated. Before that the changes can be undone with <strong><em>reset</em></strong>. The <strong><em>close</em></strong> button discards all changes made and terminates the schema editor.</p>
-<p><img src="../img/snippets/database-tools-schema-editor-423x316.png#center" alt="database tools: schema editor" width="423" height="316"></p>
+<p><img src="../img/snippets/database-tools-schema-editor-459x316.png#center" alt="database tools: schema editor" width="459" height="316"></p>
 <p>The only restrictions for the name of a new table are that it must be unique in the database and that it is a non-empty JavaScript string. Renaming existing tables is not supported; instead, <a href="../datatable/#copy-table">copy table</a> must be used.</p>
 <p>To define the indices, the <a href="https://dexie.org/docs/Version/Version.stores()#schema-syntax">syntax</a> introduced by the Dexie library is used. In short: <strong><em>++</em></strong> represents an auto-incrementing primary key, an ampersand <strong><em>&amp;</em></strong> denotes a unique key, and an asterisk <strong><em>*</em></strong> a multi-entry array index. Square brackets <strong><em>[ ]</em></strong> around a list of identifiers represent a compound index. Identifiers for an index or the parts of a compound index must be valid JavaScript identifiers, possibly with periods as separators if they are key paths to inner object properties.</p>
 <p>In the input fields of the Indexes column, several indexes can be defined for a table, separated by commas. Changing the primary key of an existing table is not possible.</p>
 <h3 id="create-table">Create Table</h3>
-<p><img src="../img/snippets/database-tools-create-table-268x141.png#left" alt="database tools: create table panel" width="268" height="141"></p>
+<p><img src="../img/snippets/database-tools-create-table-272x163.png#left" alt="database tools: create table panel" width="272" height="163"></p>
 <p>If <strong><em>create table</em></strong> is selected, you can enter the name for a new table and a string representation of the indexes to be created for the table. Any string is allowed as the table name, with the only restriction that it must be unique within the database.</p>
 <p>Within the indexes string, the individual indexes are separated by commas. Since the keypaths parts of an index refer to object properties, a valid keypath consists of valid JavaScript identifiers, possibly separated by dots. The complete syntax for index strings is described in the <a href="https://dexie.org/docs/Version/Version.stores()#detailed-schema-syntax">dexie documentation</a>.</p>
 <p>As with all actions that modify the database schema, adding a table increments the database version.</p>

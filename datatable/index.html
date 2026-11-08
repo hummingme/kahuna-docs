@@ -16,7 +16,7 @@
         <link rel="prev" href="../database/">
       
       
-        <link rel="next" href="../configuration/">
+        <link rel="next" href="../javascript-console/">
       
       
         
@@ -458,21 +458,37 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#javascript-textarea" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JavaScript Textarea
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -624,17 +640,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#javascript-textarea" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JavaScript Textarea
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -656,9 +661,10 @@
 
 
 <h1 id="datatable-view">Datatable View</h1>
-<p>The datatable is where the data contained in an object store is displayed in a grid view. Combinable filters allow to narrow down the displayed data in a variety of ways. And the data can be edited or deleted individually, in any selection, or in its entirety. If a table is empty, <a href="#import-data">data can be imported</a> if it is in Dexie, JSON, or CSV format. Or, the <a href="#javascript-textarea">javascript textarea</a> can be used to insert records.</p>
-<div class="map datatable" width="602" height="341">
-  <img src="../img/snippets/datatable-602x341.png#center" alt="datatable" width="602" height="341">
+<p>The datatable is where the data contained in an object store is displayed in a grid view. Combinable filters allow to narrow down the displayed data in a variety of ways. And the data can be edited or deleted individually, in any selection, or in its entirety. If a table is empty, <a href="#import-data">data can be imported</a> from files in Dexie, JSON, or CSV format.</p>
+<p>The icons in the window bar are the same as in the <a href="../origin/">origin</a> and <a href="../database/">database</a> views, with the <span class="settings-icon" role="img" aria-label="tools"></span> icon calling up the table tools, the <span class="adjustments-icon" role="img" aria-label="configuration"></span> icon allowing configuration for the selected table, and the <a href="../javascript-console/">JavaScript console</a>, when called from here with the <span class="console-icon" role="img" aria-label="console"></span> icon, additionally provides access to the table, its data, and to the selected rows as a collection object.</p>
+<div class="map datatable" width="656" height="355">
+  <img src="../img/snippets/datatable-656x355.png#center" alt="datatable" width="656" height="355">
   <div class="a"></div>
   <div class="b"></div>
   <div class="c"></div>
@@ -680,7 +686,7 @@
 <p>With the <span class="adjustments-search-icon" role="img" aria-label="search configuration"></span> icon on the left side of the filter elements the <a href="../configuration/#filters">filter configuration</a> can be invoked, allowing you to add, edit, or remove filters.</p>
 </li>
 <li>
-<p>All filters configured for the table are displayed side by side. The order can be adjusted via drag &amp; drop in the <a href="../configuration/#filters">filter configuration</a>. As long as no search value is entered and always when hovering with the mouse, the name of the filter field and the filter type are visible.</p>
+<p>All filters configured for the table are displayed side by side. The order can be adjusted via drag &amp; drop in the <a href="../configuration/#filters">filter configuration</a>. As long as no search value is entered and always when hovering with the mouse, the name of the filter field and the filter type are visible. See also the information on <a href="../configuration/#filter-evaluation">filter evaluation</a>.</p>
 </li>
 <li>
 <p>The search is triggered when the <span class="check-icon" role="img" aria-label="submit"></span> button is clicked or by pressing the Return key while entering a search value. Clicking the <span class="x-icon" role="img" aria-label="reset"></span> button resets all search fields. Search entries are saved as part of the filter configuration so that they remain active when a table is accessed again at a later time.</p>
@@ -698,18 +704,18 @@
 <p>Clicking on a data row selects the row, clicking again deselects it. Selected rows are displayed with a different background color, and their total number is shown in <span class="k" role="img" aria-label="item k"></span>.</p>
 </li>
 <li>
-<p><a name="point-value-edit"></a>When hovering over a displayed value a <span class="pencil-icon" role="img" aria-label="pencil"></span> icon appears. By clicking on the icon the <a href="#value-editor">value editor</a> is summoned, allowing to change the value and its type.</p>
+<p><a id="point-value-edit"></a>When hovering over a displayed value a <span class="pencil-icon" role="img" aria-label="pencil"></span> icon appears. By clicking on the icon the <a href="#value-editor">value editor</a> is summoned, allowing to change the value and its type.</p>
 </li>
 <li>
-<p><a name="point-row-edit"></a>When the mouse hover over a table row, icons appear that allow to delete or edit the displayed data. The editing of row data is done in a <a href="#javascript-textarea">textarea</a> below the datatable as javascript code.</p>
+<p><a id="point-row-edit"></a>When the mouse hover over a table row, icons appear that allow to delete or edit the displayed data. Whether deletion requires confirmation in a dialog box can be configured in the <a href="../configuration/#behavior">behavior configuration</a>. The editing of row data is done in the <a href="../javascript-console/">JavaScript console</a> with access to the row data in the object <code>row</code>.</p>
 </li>
 <li>
-<p>Below the datatable, information about and actions for the selected records are displayed. The <strong><strong>select all</strong></strong> checkbox de-/selects all data rows that are displayed based on the filter entries. The <strong><strong>select page</strong></strong> checkbox does the same with the data rows currently displayed on the screen. The <span class="settings-icon" role="img" aria-label="settings"></span> icon behind the number of selected records is used to display the <a href="#selection-tools">selection tools</a>.</p>
+<p>Below the datatable, information about and actions for the selected records are displayed. The <strong><strong>select all</strong></strong> checkbox de-/selects all data rows that are displayed based on the filter entries. The <strong><strong>select page</strong></strong> checkbox does the same with the data rows currently displayed on the screen. The <span class="settings-icon" role="img" aria-label="tools"></span> icon behind the number of selected records is used to display the <a href="#selection-tools">selection tools</a>.</p>
 </li>
 </ol>
 <h2 id="table-tools">Table Tools</h2>
 <p><img src="../img/snippets/datatable-tools-256x206.png#left" alt="table tools: menu list" width="256" height="206"></p>
-<p>While in the datatable view, the table tools are accessed via the <span class="settings-icon" role="img" aria-label="settings"></span> icon displayed in the window title. In addition, the table tools can be accessed by clicking on the gear icon that appears when hovering over a row of the <a href="../database/#table-list">table list</a> in the database view.</p>
+<p>While in the datatable view, the table tools are accessed via the <span class="settings-icon" role="img" aria-label="tools"></span> icon displayed in the window title. In addition, the table tools can be accessed by clicking on the gear icon that appears when hovering over a row of the <a href="../database/#table-list">table list</a> in the database view.</p>
 <p class="clear" />
 
 <h3 id="import-data">Import Data</h3>
@@ -750,7 +756,7 @@
 <p>If the type in the selection is changed, the existing value is transformed from the previous type to the new type wherever this makes sense. For example, it is possible to switch back and forth between Array and Set or between Date and String.</p>
 <p><img src="../img/snippets/value-editor-code-460x359.png#right" alt="value editor, edited an array value in a form" width="460x359" height="221"></p>
 <p>The <strong>value</strong> section is used for display and modification. For many types, editing can be done in an HTML form. And for all types the value can be manipulated by applying Javascript code, provided that for the host the execution of Javascript code is not prevented by CSP rules. If an <span class="info-icon" role="img" aria-label="info"></span>  icon is displayed next to the form, it provides instructions on how to enter valid data for that type. The <span class="adjustments-code-icon" role="img" aria-label="adjustments code"></span> icon is also context-dependent and provides access to options that, when selected, are saved for values ​​of this type in the current table column.</p>
-<p>The available <strong>input</strong> methods depend on the data type. The method <strong>javascript code</strong> is available for all data types if Kahuna is allowed to execute Javascript on the host. A <a href="#javascript-textarea">javascript textarea</a> is used for code input. The code can access the current data value using the variable <code>value</code>, and the returned value is set as the new data value. The other global variables of the <a href="#javascript-textarea">javascript textarea</a> are also available.</p>
+<p>The available <strong>input</strong> methods depend on the data type. The method <strong>javascript code</strong> is available for all data types if Kahuna is allowed to execute Javascript on the host. A textarea is used for code input. The code can access the current data value using the variable <code>value</code>, and the returned value is set as the new data value. The other predefined objects of the <a href="../javascript-console/#predefined-objects">JavaScript console</a> are also available.</p>
 <p>Using <strong>form</strong> as an input method, the value of most data types can be changed in an HTML form. When entering data into a form, there are often rules to follow or restrictions, the details of which are described by the <span class="info-icon" role="img" aria-label="info"></span> icon. For example, JSON syntax must be used for the data types Array and Object. Other input methods include <strong>upload</strong> of files (i.e. image, text, CSV or JSON data), and Date values ​​can be entered as <strong>timestamp</strong> integers.</p>
 <p><img src="../img/snippets/value-editor-options-293x201.png#left" alt="configure value editor options" width="293" height="201"></p>
 <p>A <span class="adjustments-code-icon" role="img" aria-label="adjustments code"></span> icon is displayed to the right of the form input and also to the right of the javascript textarea, allowing to adjust formatting settings. Customized settings are retained for each table and each data field.</p>
@@ -759,52 +765,13 @@
 
 <h2 id="selection-tools">Selection Tools</h2>
 <p><img src="../img/snippets/selection-tools-343x184.png#right" alt="selection tools: menu list" width="343" height="184"></p>
-<p>Clicking on the <span class="settings-icon" role="img" aria-label="settings"></span> icon, which appears below the data table as soon as data records are selected, opens the layer with the tools available for actions on the selection.</p>
+<p>Clicking on the <span class="settings-icon" role="img" aria-label="tools"></span> icon, which appears below the data table as soon as data records are selected, opens the layer with the tools available for actions on the selection.</p>
 <p class="clear" />
 
 <p>By using <strong><em>invert selection</em></strong> the selection state is changed for all records in the table.</p>
 <p>After using <strong><em>clear selection</em></strong> no records are selected anymore.</p>
 <p><strong><em>delete selected rows</em></strong> will ask for confirmation before the selected data sets are deleted from the table.</p>
 <p><strong><em>export data</em></strong> in the selection tools exports the selected data records in Dexie, JSON or CSV format. Except for the limitation of the amount of data by the selection, the use is identical to the <a href="#export-data">table tools: export</a> functionality. The settings available when exporting are described in the <a href="../configuration/#export">Configuration / Export</a> section.</p>
-<h2 id="javascript-textarea">JavaScript Textarea</h2>
-<p>The text area is displayed below the data table by default, but can be hidden in the <a href="../configuration/#behavior">behavior configuration</a>, item <span class="b"></span>. In addition to executing arbitrary JavaScript, the text area is used to edit data records (see item <span class="j"></span> <a href="./">above</a>) and to edit individual data values within the <a href="#value-editor">value editor</a>.</p>
-<p><img src="../img/snippets/javascript-textarea-486x174.png#center" alt="javascript textarea" width="486" height="174"></p>
-<p>Some global variables are available for use in the JavaScript code:</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>db</td>
-<td><a href="https://dexie.org/docs/Dexie/Dexie">Dexie database object</a> as returned from <code>await Dexie.open('dbname')</code> of the currently selected database.</td>
-</tr>
-<tr>
-<td>table</td>
-<td><a href="https://dexie.org/docs/Table/Table">Dexie Table object</a> of the currently selected object store.</td>
-</tr>
-<tr>
-<td>selection</td>
-<td><a href="https://dexie.org/docs/Collection/Collection">Dexie Collection object</a> of the selected data records.</td>
-</tr>
-<tr>
-<td>row</td>
-<td>a JavaScript object holding the data of a record that has been selected for editing. Only available when <a href="#point-row-edit">editing row data</a>.</td>
-</tr>
-<tr>
-<td>value</td>
-<td>The data value of the table cell that was selected for editing. Only available within the <a href="#value-editor">value editor</a>.</td>
-</tr>
-<tr>
-<td>Dexie</td>
-<td>A global <a href="https://dexie.org/docs/Dexie/Dexie">Dexie</a> instance that can be used to <a href="https://dexie.org/docs/Dexie/Dexie.open()">open</a> other IndexedDB databases.</td>
-</tr>
-</tbody>
-</table>
-<p>The chevron navigation below the textarea can be used to switch between saved JavaScript codes. If the navigation is in the first position, the letter <strong>u</strong> signals that the code is <strong>u</strong>nsaved. The icons on the right side of the navigation appear depending on the state of the entered code. The <span class="stack-push-icon" role="img" aria-label="save code"></span> icon is used to save a new code, the <span class="stack-middle-icon" role="img" aria-label="update code"></span> to update a changed code and the <span class="stack-pop-icon" role="img" aria-label="delete code"></span> to delete a previously saved code.</p>
 
 
 
